@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/img/maintenance.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/styles/style.css">
   <title>EX | Автозапчасти и Авторемонт</title>
 </head>
@@ -29,23 +30,27 @@
         <img src="assets/img/header/logo.png" alt="Logo" height="54" width="80">
       </a>
       <nav class="header__nav">
-        <li>
-          <a href="#contact">Связаться с нами</a>
-        </li>
-        <li>
-          <a href="#about">О нас</a>
-        </li>
-        <li>
-          <a href="#services">Сервисы</a>
-        </li>
-        <div class="header__nav-btn">
-          <a href="tel:89185025025">
-            <img src="assets/img/header/header_phone.svg" alt="Icons" width="32" height="32">
-          </a>
-          <a href="tel:89185025025">
-            <img src="assets/img/header/header_wt.svg" alt="Icons" width="32" height="32">
-          </a>
-        </div>
+        <ul>
+          <li>
+            <a href="#contact">Связаться с нами</a>
+          </li>
+          <li>
+            <a href="#about">О нас</a>
+          </li>
+          <li>
+            <a href="#services">Сервисы</a>
+          </li>
+          <li>
+            <div class="header__nav-btn">
+              <a href="tel:89185025025">
+                <img src="assets/img/header/header_phone.svg" alt="Icons" width="32" height="32">
+              </a>
+              <a href="tel:89185025025">
+                <img src="assets/img/header/header_wt.svg" alt="Icons" width="32" height="32">
+              </a>
+            </div>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -53,7 +58,7 @@
     <div class="wrapper">
       <h1 class="main__h1">Сломался автомобиль? Мы готовы вам помочь!</h1>
       <button class="main__btn trigger">Связаться с нами</button>
-      <img src="assets/img/header/header_img.svg" alt="Header Img">
+      <img class="main__img" src="assets/img/header/header_img.svg" alt="Header Img">
     </div>
   </main>
   <section class="about" id="about">
@@ -264,7 +269,7 @@
           <p>Меньше наличных, платите онлайн и оставляйте свои отзывы.</p>
         </div>
         <div id="item-4" class="angry-card-form">
-          <p>Текст</p>
+          <p>Форма обратной связи</p>
           <form class="angry-card__form" id="contact">
             <input type="text" name="email" placeholder="Введите почту">
             <input type="text" name="name" placeholder="Введите ФИО">
@@ -279,7 +284,6 @@
   <footer>
     <div class="wrapper footer_wrapper">
       <div class="footer__right">
-        <a href="#item-4">Связаться с нами</a>
         <p>График с 8:00 до 18:00</p>
         <a href="https://yandex.ru/maps/-/CCUzr-CcHB">Портовая улица, 188Б, Ростов-на-Дону, 344034</a>
       </div>
@@ -292,5 +296,4 @@
 </body>
 <script src="assets/js/btnUp.js"></script>
 <script src="assets/js/modal.js"></script>
-
 </html>
