@@ -43,9 +43,8 @@ html, body {
   content: "";
   width: 40px;
   height: 40px;
-  background: transparent no-repeat center center;
   background-size: 100% 100%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E") no-repeat center center;
 }
 
 .btn-up_hide {
@@ -70,13 +69,13 @@ header {
   justify-content: space-between;
 }
 
-.header__nav {
+.header__nav > ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header__nav > li {
+.header__nav ul > li {
   padding-left: 20px;
 }
 
@@ -136,15 +135,25 @@ main {
 }
 
 .aboutUs__cards {
+  padding-top: 33px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .aboutUs__number {
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 73px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #b2d419;
+}
+
+.aboutUs__cards-top {
+  display: flex;
+}
+
+.aboutUs__cards-top > .aboutUs__title {
+  padding-left: 10px;
 }
 
 .aboutUs__desc {
@@ -204,6 +213,7 @@ main {
   border-color: rgb(233, 231, 67);
   border-image: initial;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .service__card-title > p {
@@ -269,7 +279,7 @@ main {
 
 .tilldate__heroimg {
   position: relative;
-  right: 230px;
+  right: 292px;
 }
 
 .tilldate__card {
@@ -384,7 +394,15 @@ main {
 .angry-card__form > input {
   width: 400px;
   height: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.angry-card__form > textarea {
+  width: 400px;
+  height: 60px;
+  resize: none;
+  margin-bottom: 20px;
   padding-left: 20px;
 }
 
@@ -411,7 +429,10 @@ footer {
   justify-content: space-between;
 }
 
-.footer__right > h6 {
+.footer__right > button {
+  text-align: left;
+  background: transparent;
+  border: none;
   font-weight: 700;
   font-size: 18px;
   text-decoration-line: underline;
@@ -457,7 +478,7 @@ footer {
   color: #FFFFFF;
 }
 
-.footer__left > a:hover {
+.footer__right > button:hover {
   text-decoration: underline;
   color: #b2d419;
 }
@@ -495,8 +516,8 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 1rem 1.5rem;
-  width: 24rem;
+  padding: 5rem 1.5rem;
+  width: 38rem;
   border-radius: 0.5rem;
 }
 
@@ -519,4 +540,119 @@ footer {
   visibility: visible;
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+@media screen and (min-width: 200px) and (max-width: 780px){
+  .main__img {
+    display: none;
+  }
+  
+  .tilldate__card {
+    display: block;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+  }
+  
+  .aboutUs__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .service__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 60px));
+    align-items: stretch;
+    grid-column: 2 / span 16;
+    gap: 40px;
+  }
+
+  .trademark {
+    display: none;
+  }
+
+  .header__nav ul > li {
+    padding: 3px 0;
+  }
+  
+  .trademark__card > img {
+    display: none;
+  }
+
+  .trademark__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tilldate__wrapper > .tilldate__heroimg {
+    display: none;
+  }
+
+  header {
+    width: 355px;
+  }
+
+  .header__nav-btn {
+    padding-top: 22px;
+    margin-left: 0;
+  }
+
+  .header__nav-btn > a {
+    margin-left: 0;
+  }
+
+  footer {
+    width: 355px;
+  }
+
+  .angry-card-form {
+    width: 280px;
+    height: 700px;
+    grid: none;
+    margin-bottom: 40px;
+  }
+
+  .angry-card__form > input {
+    width: 220px;
+  }
+
+  .angry-card__form > textarea {
+    width: 220px;
+  }
+
+  .angry-card__form > button {
+    width: 220px;
+  }
+
+  .btn-up {
+    right: 5px;
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 3rem 1rem;
+    width: 21rem;
+    border-radius: 0.5rem;
+  }
+
+  .topfooter {
+    width: 348px;
+  }
+
+  .footer_wrapper {
+    display: block;
+  }
+
+  .angry-grid {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
 }
