@@ -393,13 +393,15 @@ main {
 
 .angry-card__form > input {
   width: 400px;
-  height: 60px;
+  height: 40px;
+  border: 1px solid #1F1F1F;
   margin-bottom: 20px;
   padding-left: 20px;
 }
 
 .angry-card__form > textarea {
   width: 400px;
+  border: 1px solid #1F1F1F;
   height: 60px;
   resize: none;
   margin-bottom: 20px;
@@ -409,6 +411,7 @@ main {
 .angry-card__form > button {
   width: 400px;
   height: 40px;
+  margin-top: 30px;
   cursor: pointer;
 }
 
@@ -623,6 +626,7 @@ footer {
   }
 
   .angry-card__form > button {
+    padding-top: 50px;
     width: 220px;
   }
 
